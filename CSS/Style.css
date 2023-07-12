@@ -1,0 +1,158 @@
+/*General Css Style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width:80%;
+    margin: auto;
+}
+.clear{
+    clear: both;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+    height:2500px
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:rgba(0, 0, 0, 0.7) ;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.hover-opacity{
+    transition: opacity 0.2s; 
+}
+.hover-opacity:hover{
+    opacity:0.8
+}
+/* Header*/
+.header{
+    position: fixed;
+    width:100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.header .logo{
+    width:40%;
+    float:left;
+}
+.header .logo img{
+  margin-top: 10px;
+  width: 100px;
+}
+.header .nav{
+    width:60%;
+    float:left;
+    text-align: right;
+}
+.header .nav {
+    list-style-type: none;
+    
+}
+.header .nav > li {
+    display: inline-block;
+}
+.header .nav > li > a{
+    font-size: 15px;
+    display: block;
+    padding:25px 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.header .nav > li > a.active::after,
+.header .nav > li > a::after{
+    content:"";
+    display: block;
+    background-color: #6195FF;
+    height: 2.5px;
+    margin-top: 2px;
+    transition: width 0.2s;
+
+}
+.header .nav > li > a.active::after{ 
+    width: 100%;
+    }
+.header .nav > li > a::after{ 
+width: 0;
+}
+.header .nav > li  >a:hover::after{
+ width:100%   
+}
+.dropdown{
+    position:relative;
+}
+.dropdown-menu{
+    position: absolute;
+    background-color: #6195FF;
+    list-style-type: none;
+    width: 180px;
+    text-align: left;
+    top:80%;
+    right:10.5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+.dropdown-menu li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+.dropdown:hover +ul{
+    opacity: 1;
+    visibility: visible     ;
+}
+/* Home*/
+.home{
+   height: 100vh;
+   background-image: url("../images/background/background1.webp");
+   background-size:cover;
+   background-attachment: fixed;
+   position: relative;
+}
+.home-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50% );
+    text-align: center;
+    color: white;
+    width: 60%;
+}
+.home-title{
+    font-size:55px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.home-desc{
+margin-bottom: 15px;
+line-height: 1.5;
+}
+.home .btn{
+    width:160px;
+    padding: 15px 0;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
+}
+.btn-start{
+    margin-right:5px;
+}
+.btn-learn{
+    background-color:#6195FF;
+    color:#FFF;
+}
