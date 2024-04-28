@@ -1,1 +1,1 @@
-Templete is adhustable for PC Screen Only!.
+Templete is adjustable for PC Screen Only!.
